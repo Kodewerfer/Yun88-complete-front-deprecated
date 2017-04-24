@@ -1,0 +1,32 @@
+{
+  "name": "yun88rebot",
+  "description": "",
+  "main": "",
+  "authors": [
+    "LIJIALIN"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1",
+    "vminpoly": "#latest",
+    "flexibility": "#latest",
+    "lazysizes": "#latest",
+    "perfect-scrollbar": "#latest",
+    "sticky-kit": "#latest",
+    "normalize-css": "#latest",
+    "artDialog": "#latest",
+    "video.js": "#latest",
+    "slick-carousel": "#latest",
+    "videojs-sublime-skin": "#latest",
+    "font-awsome": "#latest"
+  }
+}

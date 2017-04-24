@@ -1,0 +1,186 @@
+&.shichang-index {
+    h2 {
+        font-size: 30px;
+        color: #34495e;
+        margin-bottom: 1em;
+    }
+    .top {
+        padding: 170px 0 60px;
+        background: inline('dot-back.png');
+        h2 {
+            &+p {
+                color: #898989;
+            }
+        }
+        .icons-row {
+            margin-bottom: 8em;
+            margin-top: 3em;
+            table {
+                width: 100%;
+                div {
+                    margin-left: 0;
+                    width: 95%;
+                    background-color: #fff;
+                    line-height: 37px;
+                    padding: .5em 1em;
+                    border: 1px solid #ccc;
+                    border-radius: .5em;
+                    img {
+                        display: inline-block;
+                        vertical-align: middle;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .btn-row {
+            .clearfix();
+            .btn-more {
+                margin-left: 3px;
+                color: white;
+                font-size: 14px;
+                background-color: @predominantCol;
+                padding: 1em 3em;
+            }
+            .arrows {
+                float: right;
+                i {
+                    font-size: 3.5em;
+                    color: @predominantCol;
+                    font-weight: 100;
+                    &+i {
+                        margin-left: 1em;
+                    }
+                    .no-more {
+                        color: #ccc;
+                    }
+                }
+            }
+        }
+        .blocky-con {
+            position: relative;
+            &>span {
+                color: rgba(83, 153, 231, .15);
+                text-align: center;
+                position: absolute;
+                font-size: 140px;
+                user-select: none;
+                left: 0;
+                top: -120px;
+                width: 100%;
+                z-index: 2;
+            }
+            .blocky {
+                position: relative;
+                z-index: 3;
+                margin-bottom: 1em;
+                padding: 4vw 0 2.5vw;
+                background-color: #fff;
+                box-shadow: 0 0 5em 0 lighten(rgba(83, 153, 231, 1), 20%);
+                img {
+                    height: 77px;
+                    display: block;
+                    margin: auto;
+                }
+                p {
+                    white-space: nowrap;
+                    margin-top: 4vw;
+                    text-align: center;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .mid {
+        h2 {
+            text-align: center;
+            margin: 4vw 0;
+        }
+        .logo-wall {
+            min-height: 5em;
+            background-color: @primordial;
+            overflow: visible;
+        }
+        .container {
+            overflow: visible;
+        }
+        .logo-con {
+            overflow: visible;
+            position: relative;
+        }
+        .logo-item {
+            position: relative;
+            height: 100%;
+            border: 1px solid lighten(#1793ff, 10%);
+            border-width: 0 1px 1px 0;
+            border-collapse: collapse;
+            &:hover {
+                background-color: #2aacff;
+                box-shadow: 0 0 2em 0 darken(#0090ff, 20%);
+                transform: scale(1.1);
+                transition: .35s ease;
+                .logo-inner {}
+            }
+            &>a {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+        }
+        .logo-inner {
+            padding: 6vw 0;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            color: white;
+            p {
+                font-weight: 100;
+                font-size: 3.2vw;
+                width: 100%;
+                text-align: center;
+                letter-spacing: 2px;
+            }
+            img {
+                display: block;
+                width: 80%;
+                margin: auto;
+            }
+        }
+    }
+    .bottom {
+        height: height('shichang/cs-back.jpg');
+        background: inline('shichang/cs-back.jpg') left top no-repeat;
+        .container {
+            height: 100%;
+        }
+        .row {
+            height: 100%;
+            &>* {
+                height: 100%;
+            }
+        }
+        .left-col {
+            display: flex;
+            align-items: center;
+            img {
+                display: block;
+                margin-bottom: 3em;
+            }
+            p {
+                font-size: 22px;
+                color: #014f8a;
+            }
+        }
+        .right-col {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            .btns {
+                margin: auto;
+                display: block;
+            }
+        }
+    }
+}

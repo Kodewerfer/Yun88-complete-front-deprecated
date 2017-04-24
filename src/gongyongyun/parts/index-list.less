@@ -1,0 +1,113 @@
+&.index-list {
+  .btn-details {
+    font-size: 16px;
+    padding: 1em 2em;
+    border-radius: 5em;
+    background-color: #2aacff;
+    color: white;
+    animation: fady .5s ease-in;
+    &:hover {
+      transition: .35s;
+      transform: scale(1.1);
+    }
+  }
+  section.top {
+    padding: 8em 0;
+    padding-top: 12em;
+    text-align: center;
+    background: inline('gongyouyun/top-back.jpg') center center no-repeat;
+    h2 {
+      font-size: 32px;
+      margin-bottom: .35em;
+      b {
+        color: #088ee3;
+      }
+    }
+    .btns {
+      animation: growyRepeat 3.5s ease-in-out infinite;
+      box-shadow: 0 3px 10px #666;
+      margin-top: 3em;
+      font-size: 18px;
+      &:hover {
+        animation: none;
+        transition: .35s;
+        transform: scale(1.1);
+      }
+    }
+  }
+  section.mid {
+    margin-bottom: 5em;
+    h3 {
+      margin-top: 1em;
+      margin-bottom: 3em;
+      font-size: 26px;
+      i {
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+    .list-row {
+      overflow: hidden;
+      background-color: #ecedeb;
+      margin-bottom: 3em;
+      .list-head {
+        background-color: #a1a2a1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-height: 18vw;
+        @media @smallScreen {
+          min-height: 30vw;
+        }
+        img {
+          display: block;
+          margin: auto;
+          width: 50%;
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          top: 50%;
+          transform: translate(0, -50%);
+          right: -29px;
+          border: solid #ecedeb;
+          border-left: solid #a1a2a1;
+          border-width: 15px;
+        }
+      }
+      .list-text {
+        font-size: 16px;
+        padding: 0 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+          &+p {
+            margin-top: .5em;
+          }
+        }
+      }
+      .list-act {
+        box-shadow: -12px 0 15px #dcddd9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h4 {
+          margin-top: 1em;
+          font-size: 20px;
+          color: #d8dbde;
+        }
+      }
+      &:hover {
+        .list-head {
+          transition: .35s ease;
+          background-color: @primordial;
+          &:after {
+            border-left: 15px solid @primordial;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,191 @@
+@import '../_less/bias/config.less';
+@import './mixins.less';
+@headerBack: #373d4c;
+@headerBreak: ~"screen and (max-width:930px)";
+header.page-header {
+    user-select: none;
+    position: relative;
+    height: 67px;
+    color: white;
+    background-color: @headerBack;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1.5em 0;
+    .logo {
+        display: inline-block;
+        padding-left: 4.5em;
+    }
+    label, span, a {
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 1em;
+    }
+    nav {
+        flex: 1;
+        text-align: right;
+        ul {
+            display: inline-block;
+            .clearfix();
+            li {
+                position: relative;
+                float: left;
+                padding: 0 1.5em;
+                animation: fady .35s ease-in-out;
+                &:hover {
+                    color: lighten(@headerBack, 45%);
+                    transition: .35s ease-in-out;
+                    &:after {
+                        position: absolute;
+                        bottom: -1em;
+                        content: "";
+                        width: 100%;
+                        height: 3px;
+                        left: 0;
+                        background-color: lighten(@headerBack, 25%);
+                        animation: line .35s ease-out;
+                    }
+                }
+            }
+        }
+        .mobile-search {
+            width: 100%;
+            display: none;
+            input {
+                width: 90%;
+                margin: auto;
+                padding: 1em;
+            }
+        }
+    }
+    .mid {
+        text-align: center;
+        padding-left: 5em;
+        padding-right: 2em;
+    }
+    .end {
+        flex-shrink: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 3em;
+        padding-right: 5vw;
+        .clearfix();
+        &>* {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .log {
+        // flex: 1;
+        flex-grow: 1;
+        b {
+            padding: 0 .5em;
+        }
+    }
+    .mobile-nav {
+        display: none;
+        input {
+            display: none;
+            &:checked {
+                &+.mobile-nav-label {
+                    color: @colorAct;
+                    i:before {
+                        content: "\f00d";
+                    }
+                }
+                &~.mobile-menu {
+                    display: block;
+                }
+            }
+        }
+        &.mobile-nav-label {
+            cursor: pointer;
+            font-size: 25px;
+            i.fa:before {
+                content: "\f0c9";
+            }
+        }
+        &.mobile-menu {
+            display: none;
+            position: fixed;
+            overflow-y: auto;
+            z-index: 1000;
+            top: 67px;
+            width: 100%;
+            margin: 0;
+            left: 0;
+            right: 0;
+            max-width: 100%;
+            height: 100%;
+            background-color: rgba(55, 61, 76, .8); // transition: left .5s;
+            animation: lefty .5s ease-in-out;
+            li {
+                position: relative;
+                padding: 6vh 0;
+                width: 100%;
+                border-bottom: 1px dashed lighten(@headerBack, 10%); // padding: 6vh 0;
+                &:hover {
+                    transition: .5s;
+                    background-color: darken(@headerBack, 5%);
+                }
+                &:first-child {
+                    margin-top: 0;
+                }
+                a {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    @media @headerBreak {
+        nav {
+            display: none;
+        }
+        .end {
+            flex: 1;
+        }
+        .mid {
+            display: none;
+        }
+        .mobile-nav {
+            display: inline-block; // transition: left .5s;
+        }
+        nav .mobile-search {
+            display: block;
+        }
+    }
+}
+
+footer.page-foot {
+    background-color: #f0f4f7;
+    padding: 50px 0;
+    ul {
+        padding-left: 20px;
+        height: 155px;
+        &.no-border {
+            border: 0;
+            height: 180px;
+        }
+        li {
+            line-height: 35px;
+            font-size: 14px;
+            &:nth-child(1) {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .copyrights {
+        margin-top: 50px;
+        text-align: center;
+        color: #a6b3c1;
+        img {
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+    }
+}

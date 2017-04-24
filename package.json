@@ -1,0 +1,30 @@
+{
+  "name": "yun88rebot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "guilfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "style-loader": "*",
+    "css-loader": "*",
+    "less-loader": "*",
+    "url-loader": "*",
+    "html-loader": "*",
+    "webpack-uglify-js-plugin": "*",
+    "gulp-rename": "^1.2.2",
+    "gulp": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-postcss": "*",
+    "postcss-flexibility": "*",
+    "postcss-assets": "*",
+    "gulp-changed": "*",
+    "gulp-connect": "*",
+    "gulp-less": "*",
+    "vinyl-named": "*",
+    "webpack2-stream-watch": "*"
+  },
+  "scripts": {},
+  "keywords": [],
+  "author": "LIJIALIN",
+  "license": "ISC"
+}

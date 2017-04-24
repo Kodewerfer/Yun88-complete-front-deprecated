@@ -1,0 +1,82 @@
+/**
+* Common classes.
+* mainly for tweeking or other minor styles.
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.row[autoHi] {
+    &.cloak-from-mishap {
+        &>* {
+            visibility: hidden;
+        }
+    }
+}
+
+.clearfix() {
+    *zoom: 1;
+    &:after, &:before {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.contents {
+    height: 100%;
+    width: 92%;
+    margin: auto;
+    .clearfix();
+}
+
+.container {
+    position: relative;
+    margin: 0 auto!important;
+    margin: 0 5% 0 6%;
+    max-width: @containerWidth;
+    width: 90%;    
+    .clearfix();
+}
+
+.btns {
+    outline: 0;
+    display: inline-block;
+    user-select: none;
+}
+
+.form-block {
+    &>* {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+h1, h2, h3, h4, h5 {
+    color: @hTagColor;
+}
+
+span {
+    font-size: 14px;
+}
+
+p {
+    font-size: 14px;
+}
+
+.page-wrap {
+    overflow: hidden;
+}
+
+.floor {
+    padding: 2em 0;
+    &.f-one {
+        padding-top: 4em;
+    }
+    &.f-btm {
+        padding-bottom: 0;
+    }
+}
