@@ -1,0 +1,162 @@
+&.about-us {
+  .banner-boutus {
+    background: url('../images/banners/banner-boutus.png');
+  }
+  p {
+    line-height: 2em;
+  }
+  // involved icons
+  .icon-back {
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  .icon-1 {
+    background-image: url("../images/icon01.png");
+  }
+
+  .icon-2 {
+    background-image: url("../images/icon02.png");
+  }
+
+  .icon-3 {
+    background-image: url("../images/icon03.png");
+  }
+
+  .icon-4 {
+    background-image: url("../images/icon04.png");
+  }
+  // heads up titles, same as usual
+  .heads-up {
+    .headsUp()
+  }
+
+  p,
+  span {
+    font-size: 1.167em;
+  }
+
+  p {
+    text-indent: 2em;
+  }
+  // top 3 icons
+  .basic {
+    margin-bottom: 10em;
+
+    &>div {
+      margin-top: 5em;
+      padding: 175px 3em .5em;
+      min-width: 226px;
+      min-height: 300px;
+      height: 303px;
+      text-align: center;
+
+      h1 {
+        margin-bottom: .5em;
+        font-size: 1.833em;
+      }
+    }
+  }
+  // sink contents
+  .heads-up + div {
+    &:extend(.hiring-section .heads-up+div);
+  }
+
+  .hex-logos {
+    margin-top: 5em;
+    background: url("../images/hexback.png") left no-repeat;
+
+    @media(max-width: 1429px) {
+      background-image: none;
+    }
+
+    * {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+
+    div {
+      width: 115px;
+      height: 132px;
+      background-image: url("../images/hex-more.png");
+      background-position: center;
+    }
+
+    .hex {
+      margin-right: 23px;
+
+      @media(min-width: 1280px) {
+        &.one {
+          margin-right: 66px;
+        }
+
+        &.five {
+          margin-right: 30px;
+        }
+
+        &.six {
+          margin-right: 55px;
+        }
+
+        &.seven {
+          margin-right: 55px;
+        }
+      }
+    }
+  }
+
+  .qoute {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    margin-top: 3em;
+    padding-left: 2em;
+    width: 100%;
+    color: white;
+
+    &>* {
+      display: inline-block;
+      vertical-align: middle;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+    }
+
+    .icon-qoute-pre {
+      width: 66px;
+      height: 56px;
+      background: url("../images/qoute-pre.png") center no-repeat;
+    }
+
+    .icon-qoute1 {
+      width: 25px;
+      height: 56px;
+      background-image: url("../images/qoute1.png");
+    }
+
+    .qouted {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: space-between;
+
+      .roundback {
+        flex: 0 1 auto;
+        padding: .5em 3em;
+        background-color: @blue;
+        display: inline-block;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+      }
+    }
+
+    .icon-qoute2 {
+      width: 25px;
+      height: 56px;
+      background-image: url("../images/qoute2.png");
+    }
+  }
+}
