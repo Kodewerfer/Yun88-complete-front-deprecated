@@ -17,3 +17,30 @@
         clear: both;
     }
 }
+// text text title with divide line on the back thingy.
+// NOTE:this will not be out putted.
+.headsUp() {
+  position: relative;
+  margin-top: 6em;
+  height: 4.167em;
+  text-align: center;
+
+  span,
+  p {
+    z-index: 1;
+    display: inline;
+    padding: 0 .5em;
+    background-color: white;
+    font-size: 30px;
+  }
+
+  &:after {
+    position: relative;
+    top: -1.23em;
+    z-index: -1;
+    // width: 100%;
+    display: block;
+    border-top: 1.5px solid #ccc;
+    content: ' ';
+  }
+}
