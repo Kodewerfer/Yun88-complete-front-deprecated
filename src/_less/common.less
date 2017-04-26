@@ -38,7 +38,7 @@
     margin: 0 auto!important;
     margin: 0 5% 0 6%;
     max-width: @containerWidth;
-    width: 90%;    
+    width: 90%;
     .clearfix();
 }
 
@@ -78,5 +78,35 @@ p {
     }
     &.f-btm {
         padding-bottom: 0;
+    }
+}
+
+section.banner, section.top {
+    padding: 8em 0;
+    padding-top: 12em;
+    text-align: center;
+    .banner-title {
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .banner-text {
+        padding: 20px 30%;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .btns.btn-details {
+        animation: growyRepeat 3.5s ease-in-out infinite!important;
+        box-shadow: 0 3px 10px #666;
+        margin-top: 3em;
+        font-size: 18px;
+        padding: 1em 2em;
+        border-radius: 5em;
+        background-color: #2aacff;
+        color: white;
+        &:hover {
+            animation: none!important;
+            transition: .35s;
+            transform: scale(1.1);
+        }
     }
 }
