@@ -5,6 +5,7 @@
         font-size: 30px;
     }
     .top {
+        user-select: none;
         padding: 170px 0 60px;
         background: inline('dot-back.png');
         h2 {
@@ -77,16 +78,31 @@
                 padding: 4vw 0 2.5vw;
                 background-color: #fff;
                 box-shadow: 0 0 5em 0 lighten(rgba(83, 153, 231, 1), 20%);
+                cursor: pointer;
                 img {
                     display: block;
                     height: 77px;
                     margin: auto;
+                }
+                img.normal {
+                    display: none;
                 }
                 p {
                     margin-top: 4vw;
                     text-align: center;
                     white-space: nowrap;
                     font-size: 14px;
+                }
+                &.active {
+                    background-color: #2aacff;
+                    color:white;
+                    img.normal {
+                        display: block;
+                    }
+                    img.alt {
+                        display: none;
+                    }
+
                 }
             }
         }

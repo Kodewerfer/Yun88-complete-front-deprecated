@@ -47,9 +47,8 @@ module.exports = {
     alias: {
       flexibility: 'flexibility/flexibility.js',
       lazySize: 'lazysizes/lazysizes.js',
-      jquery: 'jquery/dist/jquery.js',
-      sticky: 'sticky-kit/jquery.sticky-kit.min.js',
-      // folders from here.
+      jquery: 'jquery/src/jquery',
+      sticky: 'sticky-kit/jquery.sticky-kit.min.js',      
       vminpoly: 'vminpoly',
       slick: 'slick-carousel/slick/',
       videojs: 'video.js/dist',
