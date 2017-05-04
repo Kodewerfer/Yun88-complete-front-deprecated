@@ -8,7 +8,6 @@ window.$ = window.jQuery = require('jquery');
 
 require('lazySize')
 
-
 require('././_js/row-height-setter')
 require('././_js/con-watch-height-setter')
 require('./_js/parallax-scrolling')
