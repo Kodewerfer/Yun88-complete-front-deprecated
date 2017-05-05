@@ -1,0 +1,241 @@
+@import '../_less/bias/config.less';
+@import '../_less/mixins.less';
+header.page-header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1001;
+    transition: .5s;
+    .banner-toped-navi & {
+        transition: .5s;
+        background-color: fade(darken(#0096ff, 20%), 70%);
+    }
+}
+
+section.banner {
+    min-height: 800px;
+    min-height: 100vh;
+    padding: 0;
+    background-color: #0096ff;
+    .inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        font-size: 2vw;
+        line-height: 2em;
+        @media @smallScreen {
+            h2 {
+                margin-top: 1em;
+            }
+            font-size: 4vw;
+        }
+        h2 {
+            color: white;
+            font-weight: 100;
+            b {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+section.floors {
+    .floor {
+        .titles {
+            position: relative;
+            width: 100%;
+            z-index: 3;
+            margin-top: 12em;
+            margin-top: 8vw;
+            padding-bottom: 7em;
+            padding-bottom: 4vw;
+            &>h2,
+            &>h1,
+            &>p {
+                text-align: center;
+            }
+            &>h2 {
+                font-size: 26px;
+                font-size: 2vw;
+                margin-bottom: 1em;
+                @media @smallScreen {
+                    font-size: 5vw;
+                }
+            }
+            &>p {
+                font-size: 18px;
+                font-size: 1.25vw;
+                @media @smallScreen {
+                    font-size: 3vw;
+                }
+            }
+        }
+        &.f-1 {
+            background-color: #f4f4f4;
+            padding: 1.5em 0;
+            box-shadow: 0 -4px 5px fade(#666, 50%);
+            .icon-holder {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                &>* {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                span {
+                    padding-left: 1.5em;
+                }
+            }
+        }
+        &.f-2 {
+            .titles {
+                box-shadow: 0 4px 5px fade(#666, 50%);
+                padding-bottom: 8em;
+                padding-bottom: 5vw;
+            }
+            .hero {
+                // margin-top: 3.5vw;
+                background: inline('index/f2-back.jpg') center center;
+                height: height('index/f2-back.jpg');
+                height: 35vw;
+                position: relative;
+                @media @smallScreen {
+                    height: auto;
+                }
+                canvas {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
+                .contents {
+                    height: 100%;
+                    position: relative;
+                    z-index: 5;
+                    @media @smallScreen {
+                        padding: 2vw 0;
+                    }
+                    .row {
+                        position: relative;
+                        height: 100%;
+                        z-index: 5;
+                        .right-side {
+                            height: 100%;
+                        }
+                        .left-column {
+                            margin-top: -2.05%;
+                            z-index: 5;
+                            position: relative;
+                            height: 100%;
+                            @media @smallScreen {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+                .blocky-con {
+                    margin-top: 1.9%;
+                    height: 34%;
+                    z-index: 5;
+                    width: 100%;
+                    @media @smallScreen {
+                        padding: .75vw .65vw;
+                        position: relative;
+                        width: 50%;
+                        margin: auto;
+                    }
+                    .blocky {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #2aacff;
+                        padding: 3.5vw 0;
+                        box-shadow: 0 0 2em darken(#2aacff, 30%);
+                        a {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                        }
+                        img {
+                            width: 50%;
+                            @media @smallScreen {
+                                width: 40%;
+                            }
+                        }
+                        &:hover {
+                            img {
+                                transition: .5s;
+                                transform: scale(1.1);
+                            }
+                            background-color: fade(#2aacff, 50%);
+                        }
+                    }
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+                .right-con {
+                    height: 85%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        display: block;
+                        width: 65%;
+                    }
+                }
+                .right-text {
+                    height: 15%;
+                    h2 {
+                        font-size: 23px;
+                        color: white;
+                    }
+                    .btn-details {
+                        position: relative;
+                        color: white;
+                        font-size: 13px;
+                        padding: 1em 2em;
+                        background-color: #4eb4fb;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border: 1px solid #4eb4fb;
+                        }
+                        &:hover {
+                            transition: .5s;
+                            background-color: darken(#4eb4fb, 40%);
+                            transform: scale(1.05);
+                            &:after {
+                                transition: .65s ease-out;
+                                border-width: 1.5px;
+                                border-color: darken(#4eb4fb, 40%);
+                                transform: scale(1.2, 1.5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.f-3 {
+            img {
+                width: 100%;
+            }
+            .blocky {
+                border: 1px solid #c8eaff;
+                padding: 2em 1.5em;
+            }
+        }
+    }
+}

@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
+    "particleground": "latest",
     "jquery": "1",
     "vminpoly": "#latest",
     "flexibility": "#latest",

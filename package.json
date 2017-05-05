@@ -5,6 +5,7 @@
   "main": "guilfile.js",
   "dependencies": {},
   "devDependencies": {
+    "uuid": "*",
     "style-loader": "*",
     "css-loader": "*",
     "less-loader": "*",

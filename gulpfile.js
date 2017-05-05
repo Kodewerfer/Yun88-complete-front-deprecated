@@ -6,8 +6,12 @@ var gulp = require('gulp')
 var changed = require('gulp-changed')
 var sourceMap = require('gulp-sourcemaps')
 var less = require('gulp-less')
+var path = require('path')
+
 var named = require('vinyl-named')
 var rename = require('gulp-rename')
+const uuidV1 = require('uuid/v1')
+
 var connect = require('gulp-connect')
 var postcss = require('gulp-postcss')
 var postassets = require('postcss-assets')
@@ -94,15 +98,20 @@ gulp.task('less-specials', function () {
 // This task come with webpack's own watch function, don't need to create watch for it anymore.
 // THIS WILL NOT COMPILE ANY NG MODULES
 gulp.task('webpack-js', function () {
-  var tmp = {}
   return gulp.src(IOPATH.js.src)
-    .pipe(named())
-    .pipe(rename(function (path) {
-      tmp[path.basename] = path
+    .pipe(named(function (file) {
+      var dirnames = path.dirname(file.history[0])
+      var basename = path.basename(file.history[0], path.extname(file.history[0]))
+      var thePre = path.extname(dirnames.replace(/\\/g, '.')).slice(1)
+      return thePre + '.' + basename
     }))
     .pipe(webpack(require('./webpack.config')))
-    .pipe(rename(function (path) {
-      path.dirname = tmp[path.basename] ? tmp[path.basename]['dirname'] : './'
+    .pipe(rename(function (thePath) {
+      thePath.dirname = path.basename(thePath.basename, path.extname(thePath.basename))
+      thePath.basename = path.extname(thePath.basename).slice(1)
+      if (thePath.dirname === 'src') {
+        thePath.dirname = './'
+      }
     }))
     .pipe(gulp.dest(IOPATH.js.dist))
     .on('error', swallowError)
