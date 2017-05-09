@@ -154,9 +154,9 @@ section.floors {
                         justify-content: center;
                         width: 100%;
                         height: 100%;
-                        background-color: #2aacff;
+                        background-color: @colorAct;
                         padding: 3.5vw 0;
-                        box-shadow: 0 0 2em darken(#2aacff, 30%);
+                        box-shadow: 0 0 2em darken(@colorAct, 30%);
                         a {
                             position: absolute;
                             width: 100%;
@@ -171,11 +171,8 @@ section.floors {
                             }
                         }
                         &:hover {
-                            img {
-                                transition: .5s;
-                                transform: scale(1.1);
-                            }
-                            background-color: fade(#2aacff, 50%);
+                            transition: .5s;
+                            transform: translateX(2em);
                         }
                     }
                     &:first-child {
@@ -230,11 +227,181 @@ section.floors {
         }
         &.f-3 {
             img {
-                width: 100%;
+                display: block;
+                margin: auto;
+                margin-top: 2em;
+                width: 70%;
             }
             .blocky {
+                position: relative;
+                display: flex;
                 border: 1px solid #c8eaff;
                 padding: 2em 1.5em;
+                margin-bottom: 1em;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                h3 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 1em;
+                }
+                .alt {
+                    transition: .5s;
+                    opacity: 0;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    transform: scale(1.1);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    color: white;
+                    background-color: @colorAct;
+                    &>* {
+                        display: block;
+                    }
+                    h3 {
+                        padding-left: 20%;
+                        color: white;
+                    }
+                    .arrow {
+                        text-align: center;
+                        font-size: 5vw;
+                        @media @smallScreen {
+                            font-size: 15vw;
+                        }
+                    }
+                }
+                &:hover {
+                    .alt {
+                        opacity: 1;
+                    }
+                }
+            }
+            .more-btn {
+                margin: 4em 0;
+                text-align: center;
+                .btn-more {
+                    font-size: 14px;
+                    display: inline-block;
+                    padding: 1.5em 5em;
+                    box-shadow: 0 0 10px #afcbec;
+                    color: #afcbec;
+                    border-radius: 5em;
+                    &:hover {
+                        transition: .5s;
+                        background-color: #afcbec;
+                        color: white;
+                    }
+                }
+            }
+        }
+        &.f-4 {
+            .back-row {
+                background: inline('index/f4-back.jpg');
+                background-position-x: center;
+                background-position-y: bottom; // background-size: cover;
+                min-height: 400px;
+                min-height: 60vh;
+                padding-bottom: 4vw;
+                .blockie {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    color: white; // padding: 3vw 0;
+                    margin: 2vw 0;
+                    img {
+                        margin-bottom: 1.5vw;
+                    }
+                    p+p {
+                        margin-top: 1vw;
+                    }
+                    &:hover {
+                        transition: .5s;
+                        box-shadow: 0 0 20px darken(#0084ff, 15%);
+                    }
+                }
+            }
+        }
+        &.f-5 {
+            background: inline('index/f5-back.jpg');
+            min-height: height('index/f5-back.jpg');
+            min-height: 40vw;
+            padding-bottom: 5vw;
+            .coop-block {
+                &:hover {}
+            }
+            .coop-block {
+                position: relative;
+                a {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                }
+                &:hover {
+                    .text-holder {
+                        transition: .5s;
+                        border-color: #fff;
+                        box-shadow: 0 0 2em fade(#007eff, 20%);
+                    }
+                    .logo-wrap {
+                        transition: .5s;
+                        box-shadow: 0 0 2em fade(#007eff, 20%);
+                    }
+                }
+            }
+            .text-holder {
+                border: 1px solid #ccc;
+                font-size: 14px;
+                padding: 2em;
+            }
+            .logo-holder {
+                margin-top: 2em;
+                text-align: center;
+                &>* {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                span {
+                    font-size: 18px;
+                }
+                .logo-wrap {
+                    padding: 1em;
+                }
+            }
+        }
+        &.f-6 {
+            background: inline('index/f6-back.jpg') center center no-repeat;
+            height: height('index/f6-back.jpg');
+            color: white;
+            .row {
+                height: 100%;
+                &>* {
+                    height: 100%;
+                }
+            }
+            .left-sider {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+            .right-sider {
+                display: flex;
+                align-items: center;
+            }
+            .btn-contact {
+                display: inline-block;
+                padding: 1em 2em;
+                font-size: 16px;
+                font-weight: 600;
+                border: 3px solid #fff;
             }
         }
     }

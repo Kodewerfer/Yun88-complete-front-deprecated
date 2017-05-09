@@ -1,0 +1,137 @@
+@import '../_less/bias/config.less';
+@import '../_less/mixins.less';
+main.page-wrap {
+    section.top {
+        background: inline('dot-back.png');
+        .img-holder {
+            padding: 30px 0;
+            img {
+                width: 100%;
+            }
+        }
+        .text-holder {
+            padding-top: 110px;
+            padding-bottom: 30px;
+            text-align: right;
+            h2 {
+                font-size: 2.5vw;
+                margin-bottom: 1em;
+            }
+            .btn-contact {
+                transition: .5s;
+                padding: 1em 3em;
+                font-size: 1vw;
+                margin-top: 5em;
+                color: white;
+                background-color: @colorAct;
+                &:hover {
+                    box-shadow: 5px 5px 10px #8bbedf;
+                }
+                @media @smallScreen{
+                    font-size: 3vw;
+                }
+            }
+        }
+    }
+    section.mid {
+        padding-bottom: 5em;
+        &>h2 {
+            font-weight: 100;
+            text-align: center;
+            font-size: 2vw;
+            margin-top: 5em;
+            margin-bottom: 3em;
+        }
+        .row-blockie {
+            vertical-align: middle;
+            display: flex;
+            align-items: center;
+            border-radius: 1em;
+            height: 100px;
+            padding: 4em 2.5em;
+            margin-bottom: 2em;
+            box-shadow: 0 0 3em fade(@colorAct, 20%);
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .img-holder {
+            // width: 30%;
+            position: relative;
+            padding-top: 15px;
+            padding-top: 1vw;
+            img {
+                // width: 80%;
+                // margin: auto;
+            }
+        }
+        .desc-text {
+            h4 {
+                font-size: 20px;
+                font-size: 1.5vw;
+                margin-bottom: .5em;
+                @media @smallScreen {
+                    font-size: 4.5vw;
+                }
+            }
+            margin-left: 2em;
+        }
+    }
+    section.lower {
+        background: #0090ff;
+        padding-top: 12em;
+        padding-bottom: 8em;
+        text-align: center;
+        &>h2 {
+            font-weight: 100;
+            text-align: center;
+            font-size: 2vw;
+            margin-bottom: 2em;
+            color: white;
+        }
+        p {
+            font-size: 14px;
+            margin-top: 1em;
+            color: white;
+            margin-bottom: 2em;
+        }
+    }
+    section.bottom {
+        padding: 5em 0;
+        p {
+            padding-left: 10%;
+            margin-top: .8em;
+            color: @colorAct;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .btns {
+            font-size: 16px;
+            padding: 1em 2em;
+            border: 1px solid #ccc;
+            &+.btns {
+                margin-left: 1em;
+            }
+        }
+        .btn-contact {
+            background-color: @colorAct;
+            color: white;
+        }
+        @media @smallScreen {
+            text-align: center;
+            p {
+                margin: auto;
+                width: 80%;
+                padding-left: 0;
+            }
+            .btns {
+                margin-top: 2em;
+            }
+        }
+    }
+    h2 {
+        @media @smallScreen {
+            text-align: center;
+            font-size: 5.5vw!important;
+        }
+    }
+}

@@ -16,7 +16,9 @@ header.page-header {
         display: inline-block;
         padding-left: 4.5em;
     }
-    label, span, a {
+    label,
+    span,
+    a {
         font-size: 16px;
         font-weight: 100;
         line-height: 1em;
@@ -48,20 +50,36 @@ header.page-header {
                 }
             }
         }
-        .mobile-search {
-            width: 100%;
-            display: none;
-            input {
-                width: 90%;
-                margin: auto;
-                padding: 1em;
-            }
-        }
     }
     .mid {
         text-align: center;
-        padding-left: 5em;
+        padding-left: 2em;
         padding-right: 2em;
+        label {
+            position: relative;
+        }
+        .search-box {
+            width: 12em;
+            padding: .5em 1em;
+        }
+        i {
+            font-size: 16px;
+        }
+        .search-notice {
+            display: none;
+            background-color: fade(#000, 30%);
+            position: absolute;
+            left: 0;
+            top: 130%;
+            width: 100%;
+            padding: 1em 2em;
+            font-weight: 600;
+        }
+        &:hover {
+            .search-notice {
+                display: block;
+            }
+        }
     }
     .end {
         flex-shrink: 0;
@@ -99,6 +117,11 @@ header.page-header {
                     display: block;
                 }
             }
+        }
+        .mobile-search-box {
+            display: inline-block;
+            width: 80%;
+            padding: .5em 1em;
         }
         &.mobile-nav-label {
             cursor: pointer;
