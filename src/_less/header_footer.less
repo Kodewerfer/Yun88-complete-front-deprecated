@@ -32,21 +32,70 @@ header.page-header {
             li {
                 position: relative;
                 float: left;
-                padding: 0 1.5em;
                 animation: fady .35s ease-in-out;
-                &:hover {
-                    color: lighten(@headerBack, 45%);
-                    transition: .35s ease-in-out;
-                    &:after {
-                        position: absolute;
-                        bottom: -1em;
-                        content: "";
-                        width: 100%;
-                        height: 3px;
-                        left: 0;
-                        background-color: lighten(@headerBack, 25%);
-                        animation: line .35s ease-out;
+                span {
+                    display: inline-block;
+                    position: relative;
+                    margin: 0 1em;
+                    padding: 1em .5em;
+                    transition: .5s ease-out;
+                    i {
+                        margin-left: .5em;
                     }
+                }
+                &:hover {
+                    span {
+                        color: lighten(@headerBack, 45%);
+                        &:after {
+                            position: absolute;
+                            bottom: 0;
+                            content: "";
+                            width: 100%;
+                            height: 3px;
+                            left: 0;
+                            background-color: lighten(@headerBack, 25%);
+                            animation: line .35s ease-out;
+                        }
+                    }
+                }
+            }
+        }
+        .submenu {
+            display: none;
+            opacity: 0;
+            transition: opacity 2s ease-out;
+            background-color: lighten(@headerBack, 10%);
+            font-size: 16px;
+            position: absolute;
+            z-index: 10;
+            left: 0;
+            top: 90%;
+            min-width: 100%;
+            height: auto;
+            white-space: nowrap;
+            padding: .5em;
+            padding-top: 1em;
+            padding-right: 2em;
+            p {
+                text-align: left;
+                margin-bottom: 1em;
+                padding-left: 1em;
+                &:hover {
+                    color: lighten(@headerBack, 50%);
+                }
+            }
+        }
+        input {
+            display: none;
+            &:checked {
+                &~.submenu {
+                    display: block;
+                    opacity: 1;
+                }
+                &~span {
+                    background-color: lighten(@headerBack, 10%); // margin: 0;
+                    margin: 0;
+                    padding: 1em 1.5em;
                 }
             }
         }

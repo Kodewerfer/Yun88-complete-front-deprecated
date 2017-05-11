@@ -25,9 +25,9 @@
     "sticky-kit": "#latest",
     "normalize-css": "#latest",
     "artDialog": "#latest",
-    "video.js": "#latest",
     "slick-carousel": "#latest",
-    "videojs-sublime-skin": "#latest",
-    "font-awsome": "#latest"
+    "font-awsome": "#latest",
+    "plyr": "^2.0.12",
+    "animate.css": "^3.5.2"
   }
 }

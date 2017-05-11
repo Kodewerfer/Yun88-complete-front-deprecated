@@ -60,9 +60,10 @@ module.exports = {
       sticky: 'sticky-kit/jquery.sticky-kit.min.js',
       vminpoly: 'vminpoly',
       slick: 'slick-carousel/slick/',
-      videojs: 'video.js/dist',
       pefectScroll: 'perfect-scrollbar/min',
-      particleground: 'particleground/jquery.particleground'
+      particleground: 'particleground/jquery.particleground',
+      scrollmagic: 'ScrollMagic/scrollmagic/uncompressed/',
+      TweenMax:'gsap/src/uncompressed/TweenMax.js'
     }
   }
 
